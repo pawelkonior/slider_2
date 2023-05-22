@@ -1,3 +1,21 @@
-body {
-  background-color: red;
+.slider {
+  &__slides{}
+  &__nav{}
 }
+
+.slides {
+  &__slide {}
+  &__box {}
+  &__hdl {}
+  &__lead {}
+  &__link {}
+}
+
+.nav {
+  &__btn {
+    &.nav__btn--prev {
+
+    }
+  }
+}
+
