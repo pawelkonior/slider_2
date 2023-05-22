@@ -1,21 +1,6 @@
-.slider {
-  &__slides{}
-  &__nav{}
-}
+@import "normalize";
+@import "variables";
+@import "functions";
+@import "global";
 
-.slides {
-  &__slide {}
-  &__box {}
-  &__hdl {}
-  &__lead {}
-  &__link {}
-}
-
-.nav {
-  &__btn {
-    &.nav__btn--prev {
-
-    }
-  }
-}
-
+@import "components/slider";

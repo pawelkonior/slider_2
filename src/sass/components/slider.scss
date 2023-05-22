@@ -1,0 +1,95 @@
+@import "../functions";
+
+
+$slide-height: rem(300px);
+
+@keyframes slide-1 {
+  0% {left: 0}
+  19% {left: 0}
+  33% {left: -100%}
+  67% {left: -100%}
+  81% {left: -200%}
+  100% {left: -200%}
+}
+
+@keyframes slide-2 {
+  0% {left: 100%}
+  19% {left: 100%}
+  33% {left: 0}
+  67% {left: 0}
+  81% {left: -100%}
+  100% {left: -100%}
+}
+
+@keyframes slide-3 {
+  0% {left: 200%}
+  19% {left: 200%}
+  33% {left: 100%}
+  67% {left: 100%}
+  81% {left: 0}
+  100% {left: 0}
+}
+
+.slider {
+  background-color: lightblue;
+
+  &__slides {
+  }
+
+  &__nav {
+  }
+}
+
+.slides {
+  position: relative;
+  overflow: hidden;
+  min-height: $slide-height;
+
+  &__slide {
+    width: 100%;
+    min-height: $slide-height;
+    position: absolute;
+    background-color: lightcoral;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    &:first-child {
+      animation-name: slide-1;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      background-color: lightgoldenrodyellow;
+      animation-name: slide-2;
+      left: 100%;
+    }
+
+    &:last-child {
+      background-color: lightgreen;
+      animation-name: slide-3;
+      left: 200%;
+    }
+  }
+
+  &__box {
+  }
+
+  &__hdl {
+  }
+
+  &__lead {
+  }
+
+  &__link {
+  }
+}
+
+.nav {
+  &__btn {
+    &.nav__btn--prev {
+
+    }
+  }
+}
+
