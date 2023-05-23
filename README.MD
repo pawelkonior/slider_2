@@ -7,3 +7,7 @@
 3. Imports [=> docs](https://sass-lang.com/documentation/at-rules/import)
 4. Variables [=> docs](https://sass-lang.com/documentation/variables)
 5. Functions [=> docs](https://sass-lang.com/documentation/values/functions)
+6. Lists
+7. Maps
+8. Loop each
+9. Interpolation `#{}`

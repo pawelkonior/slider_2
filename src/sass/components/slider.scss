@@ -22,26 +22,19 @@ $slide-height: rem(300px);
     width: 100%;
     min-height: $slide-height;
     position: absolute;
-    background-color: lightcoral;
     animation-duration: 10s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    &:first-child {
-      animation-name: slide-1;
-      left: 0;
-    }
-
-    &:nth-child(2) {
-      background-color: lightgoldenrodyellow;
-      animation-name: slide-2;
-      left: 100%;
-    }
-
-    &:last-child {
-      background-color: lightgreen;
-      animation-name: slide-3;
-      left: 200%;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-name: slide-#{$i};
+        background-image: url("#{$img-path}/slide-#{$i}.jpeg");
+        left: ($i - 1) * 100%;
+      }
     }
   }
 

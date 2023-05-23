@@ -391,23 +391,26 @@ body {
   width: 100%;
   min-height: 18.75rem;
   position: absolute;
-  background-color: lightcoral;
   animation-duration: 10s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.slides__slide:first-child {
+.slides__slide:nth-child(1) {
   animation-name: slide-1;
-  left: 0;
+  background-image: url("../images/slide-1.jpeg");
+  left: 0%;
 }
 .slides__slide:nth-child(2) {
-  background-color: lightgoldenrodyellow;
   animation-name: slide-2;
+  background-image: url("../images/slide-2.jpeg");
   left: 100%;
 }
-.slides__slide:last-child {
-  background-color: lightgreen;
+.slides__slide:nth-child(3) {
   animation-name: slide-3;
+  background-image: url("../images/slide-3.jpeg");
   left: 200%;
 }
 
