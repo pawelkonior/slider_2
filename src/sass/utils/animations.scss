@@ -1,0 +1,18 @@
+@use "sass:list";
+
+
+$frames: 0%, 19%, 33%, 67%, 81%, 100%;
+$positions-1: 0, 0, -100%, -100%, -200%, -200%;
+$positions-2: 100%, 100%, 0%, 0%, -100%, -100%;
+$positions-3: 200%, 200%, 100%, 100%, 0%, 0%;
+
+$animation-slides: ('slide-1': $positions-1, 'slide-2': $positions-2, 'slide-3': $positions-3);
+
+@each $name, $positions in $animation-slides {
+  @keyframes  #{$name}{
+    @each $frame in $frames {
+      $idx: list.index($frames, $frame);
+      #{$frame} { left: list.nth($positions, $idx);}
+    }
+  }
+}

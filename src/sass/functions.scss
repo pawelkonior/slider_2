@@ -5,3 +5,8 @@
 @function rem($px, $base: $base-font-size) {
   @return math.div($px, $base) * 1rem;
 }
+
+
+body {
+  height: rem(500px, 25px);
+}
