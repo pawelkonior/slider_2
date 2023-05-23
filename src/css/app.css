@@ -393,16 +393,19 @@ body {
 
 .slider {
   background-color: lightblue;
+  position: relative;
 }
+
 .slides {
   position: relative;
   overflow: hidden;
-  min-height: 18.75rem;
+  min-height: 31.25rem;
 }
 .slides__slide {
   width: 100%;
-  min-height: 18.75rem;
+  min-height: 31.25rem;
   position: absolute;
+  animation-duration: 10s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   background-size: cover;
@@ -447,6 +450,37 @@ body {
   right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
+  font-family: "Roboto Black", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 1.25rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.nav__btn {
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  width: 2.875rem;
+  height: 2.875rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  text-indent: -999px;
+  opacity: 0.5;
+  transition: opacity 400ms ease-in-out;
+}
+.nav__btn:hover {
+  opacity: 1;
+}
+.nav__btn.nav__btn--prev {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=app.css.map */
