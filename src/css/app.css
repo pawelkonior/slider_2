@@ -307,6 +307,18 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../fonts/roboto-black-webfont.woff2") format("woff2"), url("../fonts/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   height: 20rem;
 }
@@ -391,7 +403,6 @@ body {
   width: 100%;
   min-height: 18.75rem;
   position: absolute;
-  animation-duration: 10s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   background-size: cover;
@@ -412,6 +423,30 @@ body {
   animation-name: slide-3;
   background-image: url("../images/slide-3.jpeg");
   left: 200%;
+}
+.slides__box {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+  padding: 1.25rem 6.875rem 1.25rem 1.25rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.slides__hdl {
+  margin-top: 0;
+  font-family: "Roboto Black", serif;
+}
+.slides__lead {
+  font-family: "Roboto Medium", sans-serif;
+}
+.slides__link {
+  color: inherit;
+  text-decoration: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=app.css.map */
